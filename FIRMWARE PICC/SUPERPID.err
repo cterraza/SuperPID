@@ -1,0 +1,4 @@
+>>> Warning 202 "SUPERPID.c" Line 48(15,23): Variable never used:   flagsoft
+      Memory usage:   ROM=17%      RAM=13% - 14%
+      0 Errors,  1 Warnings.
+Build Successful.

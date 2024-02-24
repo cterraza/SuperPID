@@ -1,0 +1,186 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+007.0   PWM
+007     PORTC
+007.1   LED
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027.0   flagCX0
+027.1   flanco
+028-029 referencia
+02A-02B sensor
+02C-02D Semiciclo
+02E-02F RPM
+030-031 tt
+032     conteo
+033-034 co
+035-036 e
+037-038 e_pasado
+039-03C kp
+03D-040 in
+041-044 d
+045-048 ki
+049-04C kd
+04D.0   MAIN.visualizar
+04E     lcd_init.i
+04E-04F @PRINTF_LD_79.P1
+04E-051 @MULFF.P2
+04E-051 @SFTOI.P3
+04E-04F @ITOF.P4
+04E-051 @DIVFF.P5
+04E     MAIN.@SCRATCH1
+04E     @PSTRINGC7_79.@SCRATCH1
+04E     CalcularVelocidad.@SCRATCH1
+04F     lcd_init.@SCRATCH1
+04F     @PSTRINGC7_79.@SCRATCH2
+04F     CalcularVelocidad.@SCRATCH2
+050-051 @MUL1616.P1
+050     @PSTRINGC7_79.@SCRATCH3
+050     @PRINTF_LD_79.@SCRATCH1
+051     @PSTRINGC7_79.@SCRATCH4
+051     @PRINTF_LD_79.@SCRATCH2
+052-053 @MUL1616.P1
+052-055 @DIVFF.P2
+052-055 @MULFF.P3
+052     @PRINTF_LD_79.@SCRATCH3
+053     @PRINTF_LD_79.@SCRATCH4
+054     @PRINTF_LD_79.@SCRATCH5
+054     @MUL1616.@SCRATCH1
+055     @PRINTF_LD_79.@SCRATCH6
+056     @MULFF.@SCRATCH1
+056     @DIVFF.@SCRATCH1
+056     @PRINTF_LD_79.@SCRATCH7
+057     lcd_putc.c
+057     @MULFF.@SCRATCH2
+057     @DIVFF.@SCRATCH2
+058     lcd_gotoxy.x
+058     @delay_ms1.P1
+058     @MULFF.@SCRATCH3
+058     @DIVFF.@SCRATCH3
+059     lcd_gotoxy.y
+059     @MULFF.@SCRATCH4
+059     @DIVFF.@SCRATCH4
+05A     lcd_gotoxy.address
+05A     @MULFF.@SCRATCH5
+05A     @DIVFF.@SCRATCH5
+05B     lcd_gotoxy.@SCRATCH1
+05B     @DIVFF.@SCRATCH6
+05C     lcd_send_byte.address
+05D     lcd_send_byte.n
+05E     lcd_send_byte.@SCRATCH1
+05F     lcd_send_nibble.nibble
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+0065  @delay_ms1
+002B  LCD_INIT_STRING
+0079  lcd_send_nibble
+00A5  lcd_send_byte
+00CC  lcd_init
+00FB  lcd_gotoxy
+010D  lcd_putc
+0033  default_isr
+03D0  MAIN
+005B  @const126
+0132  @PSTRINGC7_79
+005C  @const128
+0061  @const129
+0062  @const130
+01CD  @ITOF
+01EC  @MULFF
+0263  @DIVFF
+032F  @SFTOI
+0350  @PRINTF_LD_79
+017D  CalcularVelocidad
+01AD  @MUL1616
+03D0  @cinit
+0058  end
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    D:\Proyectos\CNC\DIMMER ROUTER\
+
+Project Files:
+    DIMMER.c                                                [02-nov-11 20:35  CRC=A9B48967]
+    C:\Program Files\PICC\devices\16F877a.h                 [27-jul-11 18:03  CRC=946E9519]
+    flex_lcd.c                                              [31-oct-11 23:38  CRC=54E334DD]
+
+Source signature=E7E9883A
+
+Units:
+    D:\Proyectos\CNC\DIMMER ROUTER\DIMMER (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      DIMMER.err
+    Ext Symbols: DIMMER.esym
+    INHX8:       DIMMER.hex
+    Symbols:     DIMMER.sym
+    List:        DIMMER.lst
+    Debug/COFF:  DIMMER.cof
+    Project:     DIMMER.PJT
+    Call Tree:   DIMMER.tre
+    Statistics:  DIMMER.STA
